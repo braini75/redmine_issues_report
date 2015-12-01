@@ -73,7 +73,7 @@
 	  <%end %>
 	<%end%>
 
-	<!-- UNTERAUFGABEN?? -->
+	<!-- UNTERAUFGABEN -->
 	<% if !issue.leaf? || User.current.allowed_to?(:manage_subtasks, @project) %>
 		<hr />
 		<div id="issue_tree">
@@ -81,18 +81,10 @@
 			<%= render_descendants_tree(issue) unless issue.leaf? %>
 		</div>
 	<%end%>
-	
-	<% @relations = issue.relations.select {|r| r.other_issue(issue) && r.other_issue(issue).visible? } %>
-	<% @issue = issue %>
-	<% if @relations.present? || User.current.allowed_to?(:manage_issue_relations, @project) %>
-		<hr />
-		<div id="relations">
-			<%= render :partial => 'relations' %>
-		</div>
-	<% end %>
-
 </div>	
 
+<!-- JOURNALE -->
+<% @issue = issue %>
 <% @journals = @issue.journals.includes(:user, :details).reorder("#{Journal.table_name}.id ASC").all %>
 <% if @journals.present? %>
 	<div id="history">
