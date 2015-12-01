@@ -1,0 +1,7 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  label_plugin_titel: "Detailed Issue Report"
+  label_link_description: "Detailed Report:"
+  label_link_quick_name: "show"
+  label_link_quick_tooltip: "Creates a detailed Report of all listed Issues"
