@@ -1,3 +1,19 @@
-= redmine_issues_report
+= Redmine-Plugin: Detailed report of multiple Issues
+== Requirements 
+Redmine 2.x, 3.x
 
-Description goes here
+== Description:
+Redmine core features offers only export of issue lists, which gives no detail information of the issues or a detailed view of one issue (just the Issue view). 
+
+This plugin creates a html page with all Issues and their complete view.
+
+== Installation
+1. go to `{REDMINE_ROOT}/plugin` directory.
+2. `git clone https://github.com/braini75/redmine_issues_report.git`
+2. `rake redmine:plugins:migrate RAILS_ENV=production`
+3. Restart the redmine service. E.g. `service apache2 restart`
+4. enjoy!
+
+== Usage
+1. Select a project.
+2. access the report through the bottom link "detailed report: show" 
