@@ -1,4 +1,12 @@
+# Hooks for the Redmine-Plugin redmine_issue_report
+# 
+# Author:: Thomas Koch
+
+# This class holds all hooks for redmine_issue_report
+
 class IssuesReportHook < Redmine::Hook::ViewListener
+  
+  # Creates hook for redmine_issue_report at bottom of a project issue view
   def view_issues_index_bottom(context={})
     if !context[:project].nil? && !context[:issues].empty?
       ret_str = ''

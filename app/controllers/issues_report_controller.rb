@@ -1,3 +1,9 @@
+# This Main Controller of the Redmine-Plugin redmine_issue_report
+# 
+# Author:: Thomas Koch
+
+# This Main Controller of the Redmine-Plugin redmine_issue_report
+
 class IssuesReportController < ApplicationController
   
   helper :sort
@@ -10,10 +16,10 @@ class IssuesReportController < ApplicationController
   helper :custom_fields
   include CustomFieldsHelper
   
-  def index
-
-  end    
-  
+  # generate a detailed ticketlist from current projekt and send to render
+  #
+  # TODO: add support for other formats only html support yet
+   
   def generate   
     @project=Project.find(params[:project_id])
     retrieve_query    
