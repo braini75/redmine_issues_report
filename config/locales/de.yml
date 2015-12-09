@@ -1,6 +1,4 @@
-# English strings go here for Rails i18n
-en:
-  # my_label: "My label"
+de:
   label_plugin_titel: "Detailierter Ticket Report"
   label_link_description: "Detailierter Report: "
   label_link_quick_name: "show"
