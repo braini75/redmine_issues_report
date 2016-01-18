@@ -1,3 +1,4 @@
+# German strings go here for Rails i18n
 de:
   label_plugin_titel: "Detailierter Ticket Report"
   label_link_description: "Detailierter Report: "
