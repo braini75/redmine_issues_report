@@ -20,7 +20,8 @@
 	        <% end %>
 	        </p>	
 	        
-	<table class="attributes">
+	<div class="attributes">        
+	
 	<%= issue_fields_rows do |rows|
 	  rows.left l(:field_status), issue.status.name, :class => 'status'
 	  rows.left l(:field_priority), issue.priority.name, :class => 'priority'
@@ -52,10 +53,11 @@
 	  if User.current.allowed_to?(:view_time_entries, @project)
     	rows.right l(:label_spent_time), (issue.total_spent_hours > 0 ? link_to(l_hours(issue.total_spent_hours), issue_time_entries_path(issue)) : "-"), :class => 'spent-time'
   	  end
-	end %>
+	end %>	
 	<%= render_custom_fields_rows(@issue) %>
-	<%= call_hook(:view_issues_show_details_bottom, :issue => @issue) %>	
-	</table>
+	<%= call_hook(:view_issues_show_details_bottom, :issue => @issue) %>
+	
+	</div>
 	
 	        
 	<% if issue.description? || issue.attachments.any? -%>

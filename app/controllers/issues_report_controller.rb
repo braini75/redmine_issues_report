@@ -40,12 +40,7 @@ class IssuesReportController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { render :template => 'issues_report/report_list' }
-      format.api
-      format.atom { render :template => 'journals/index', :layout => false, :content_type => 'application/atom+xml' }
-      format.pdf  {
-        send_file_headers! :type => 'application/pdf', :filename => "#{@project.identifier}-detailed.pdf"
-      }
+      format.html { render :template => 'issues_report/report_list' }      
     end
   end
 
