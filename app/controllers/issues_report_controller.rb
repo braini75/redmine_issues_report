@@ -36,7 +36,7 @@ class IssuesReportController < ApplicationController
                               :order => sort_clause,
                               :offset => @offset,
                               :limit => @limit)
-      @issue_count_by_group = @query.issue_count_by_group           
+      @result_count_by_group = @query.result_count_by_group
     end
 
     respond_to do |format|
