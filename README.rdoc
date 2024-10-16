@@ -1,6 +1,6 @@
 = Redmine-Plugin: Detailed report of multiple Issues
 == Requirements 
-Redmine 3.x
+Redmine 3.x, 4.x, 5.x
 
 == Description:
 Redmine core features offers only export of issue lists, which gives no detail information of the issues or a detailed view of one issue (just the Issue view). 

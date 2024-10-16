@@ -4,7 +4,7 @@
 
 # This class holds all hooks for redmine_issue_report
 
-class IssuesReportHook < Redmine::Hook::ViewListener
+class IssuesReportHooks < Redmine::Hook::ViewListener
   
   # Creates hook for redmine_issue_report at bottom of a project issue view
   def view_issues_index_bottom(context={})
